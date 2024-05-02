@@ -1,0 +1,45 @@
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+package tgs POJO;// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+        class Person {
+            private String nama;
+            private int umur;
+
+        }
+
+        public Person() {
+        }
+
+        public Person(String nama, int umur) {
+            this.nama = nama;
+            this.umur = umur;
+        }
+
+        public String getnama() {
+            return nama;
+        }
+
+        publik int getumur() {
+            return umur;
+        }
+
+        public void setnama(string nama) {
+            this.nama = nama;
+        }
+
+        public void setumur(int umur) {
+            this.umur = umur;
+        }
+
+        public string to string() {
+            return "Person" +
+                    "nama saya adalah" + nama +
+                    "umur" + umur +
+                    ;
+        }
+
+        System.out.println(person);
+    }
+
+}
