@@ -1,11 +1,84 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
-    </content>
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-</module>
+public class Main {
+    public static void main(String[] args) {
+        package tgs.POJO;
+
+        public class Main {
+            public static void main(String[] args) {
+
+                class Person {
+                    private String nama;
+                    private int umur;
+
+
+                    public Person() {
+                    }
+
+                    public Person(String nama, int umur) {
+                        this.nama = nama;
+                        this.umur = umur;
+                    }
+
+                    // Getters and Setters
+                    public String getNama() {
+                        return nama;
+                    }
+
+                    public int getUmur() {
+                        return umur;
+                    }
+
+                    public void setNama(String nama) {
+                        this.nama = nama;
+                    }
+
+                    public void setUmur(int umur) {
+                        this.umur = umur;
+                    }
+                    
+                    @Override
+                    public String toString() {
+                        return "Person{" +
+                                "nama='" + nama + '\'' +
+                                ", umur=" + umur +
+                                '}';
+                    }
+                }
+
+                class Mahasiswa extends Person {
+                    private String jurusan;
+
+                    public Mahasiswa(String nama, int umur, String jurusan) {
+                        super(nama, umur);
+                        this.jurusan = jurusan;
+                    }
+
+                    // Getter and Setter for jurusan
+                    public String getJurusan() {
+                        return jurusan;
+                    }
+
+                    public void setJurusan(String jurusan) {
+                        this.jurusan = jurusan;
+                    }
+
+                    @Override
+                    public String toString() {
+                        return "Mahasiswa{" +
+                                "nama='" + getNama() + '\'' +
+                                ", umur=" + getUmur() +
+                                ", jurusan='" + jurusan + '\'' +
+                                '}';
+                    }
+                }
+
+                Mahasiswa mahasiswa = new Mahasiswa("Alice", 20, "Informatika");
+
+                System.out.println(mahasiswa);
+
+                mahasiswa = null;
+
+                System.gc();
+            }
+        }
+    }
+}
